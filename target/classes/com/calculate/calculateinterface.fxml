@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.layout.StackPane?>
+
+
+
+
+
+<VBox xmlns:fx="http://javafx.com/fxml" alignment="CENTER"  fx:controller="com.calculate.CalculateController" spacing="1"> <!-- -->
+
+<GridPane hgap="5" vgap="5" alignment="CENTER" style="-fx-background-color : #f4fbfc;" >
+
+    <Label fx:id="screen" minWidth="215" minHeight="50" GridPane.rowIndex="0" GridPane.columnSpan="4"  style="-fx-background-color : #9ce7d7"/>
+
+    <Button  text="sqrt" GridPane.columnIndex="0" GridPane.rowIndex="1" minWidth="50" minHeight="20" onAction="#sqrt" style="-fx-background-color : #e2ade0;"  /> 
+    <Button  text="sin" GridPane.columnIndex="2" GridPane.rowIndex="1" minWidth="50" minHeight="20"  onAction="#sin" style="-fx-background-color : #e2ade0;" /> 
+    <Button  text="cos" GridPane.columnIndex="3" GridPane.rowIndex="1" prefWidth="50" prefHeight="20"  onAction="#cos" style="-fx-background-color : #e2ade0;;" /> 
+    <Button  text="tan" GridPane.columnIndex="0" GridPane.rowIndex="2" prefWidth="50" prefHeight="20"  onAction="#tan" style="-fx-background-color : #e2ade0;"/> 
+    <Button  text="x!" GridPane.columnIndex="1" GridPane.rowIndex="2" prefWidth="50" prefHeight="20"  onAction="#fact" style="-fx-background-color : #e2ade0;" /> 
+    <Button  text="x^y" GridPane.columnIndex="2" GridPane.rowIndex="2" prefWidth="50" prefHeight="20"  onAction="#xExpy" style="-fx-background-color : #e2ade0;" /> 
+    <Button  text="e" GridPane.columnIndex="3" GridPane.rowIndex="2" prefWidth="50" prefHeight="20"  onAction="#e" style="-fx-background-color : #e2ade0;"/> 
+    <Button  text="ln" GridPane.columnIndex="0" GridPane.rowIndex="3" prefWidth="50" prefHeight="20"  onAction="#ln" style="-fx-background-color : #e2ade0;"  /> 
+    <Button  text="log" GridPane.columnIndex="1" GridPane.rowIndex="3" prefWidth="50" prefHeight="20"  onAction="#log"  style="-fx-background-color : #e2ade0;"/> 
+    <Button  text="pi" GridPane.columnIndex="2" GridPane.rowIndex="3" prefWidth="50" prefHeight="20"  onAction="#pi" style="-fx-background-color : #e2ade0;" />
+    <Button  text="*10EXP" GridPane.columnIndex="3" GridPane.rowIndex="3" prefWidth="50" prefHeight="20"  onAction="#m10Exp" style="-fx-background-color : #e2ade0;" />
+
+ 
+     <Button  text="AC" GridPane.columnIndex="0" GridPane.rowIndex="4" minWidth="50" minHeight="20" style="-fx-background-color : #0fcfdd;" /> 
+    <Button  text="Mod" GridPane.columnIndex="2" GridPane.rowIndex="4" minWidth="50" minHeight="20"  onAction="#Mod" style="-fx-background-color : #ac4484;" /> 
+    <Button  text="/" GridPane.columnIndex="3" GridPane.rowIndex="4" prefWidth="50" prefHeight="20"  onAction="#div" style="-fx-background-color : #ac4484;"/> 
+    <Button  text="7" GridPane.columnIndex="0" GridPane.rowIndex="5" prefWidth="50" prefHeight="20"  onAction="#handleDigitClick" style="-fx-background-color : #1c708a;" /> 
+    <Button  text="8" GridPane.columnIndex="1" GridPane.rowIndex="5" prefWidth="50" prefHeight="20"  onAction="#handleDigitClick" style="-fx-background-color : #1c708a;"  /> 
+    <Button  text="9" GridPane.columnIndex="2" GridPane.rowIndex="5" prefWidth="50" prefHeight="20"  onAction="#handleDigitClick" style="-fx-background-color : #1c708a;" /> 
+    <Button  text="*" GridPane.columnIndex="3" GridPane.rowIndex="5" prefWidth="50" prefHeight="20"  onAction="#Mul" style="-fx-background-color : #ac4484;" /> 
+    <Button  text="4" GridPane.columnIndex="0" GridPane.rowIndex="6" prefWidth="50" prefHeight="20"  onAction="#handleDigitClick" style="-fx-background-color : #1c708a;" /> 
+    <Button  text="5" GridPane.columnIndex="1" GridPane.rowIndex="6" prefWidth="50" prefHeight="20"  onAction="#handleDigitClick" style="-fx-background-color : #1c708a;" /> 
+    <Button  text="6" GridPane.columnIndex="2" GridPane.rowIndex="6" prefWidth="50" prefHeight="20"  onAction="#handleDigitClick"  style="-fx-background-color : #1c708a;"/> 
+    <Button  text="-" GridPane.columnIndex="3" GridPane.rowIndex="6" prefWidth="50" prefHeight="20"   onAction="#sous" style="-fx-background-color : #ac4484;" /> 
+    <Button   text="1" GridPane.columnIndex="0" GridPane.rowIndex="7" prefWidth="50" prefHeight="20" onAction="#handleDigitClick" style="-fx-background-color : #1c708a;" /> 
+    <Button   text="2" GridPane.columnIndex="1" GridPane.rowIndex="7" prefWidth="50" prefHeight="20" onAction="#handleDigitClick" style="-fx-background-color : #1c708a;" /> 
+    <Button  text="3" GridPane.columnIndex="2" GridPane.rowIndex="7" prefWidth="50" prefHeight="20"  onAction="#handleDigitClick" style="-fx-background-color : #1c708a;" /> 
+    <Button  text="+" GridPane.columnIndex="3" GridPane.rowIndex="7" prefWidth="50" prefHeight="20"  onAction="#addi" style="-fx-background-color : #ac4484;" /> 
+    <Button  text="0" GridPane.columnIndex="0" GridPane.rowIndex="8" prefWidth="50" prefHeight="20"  onAction="#handleDigitClick" style="-fx-background-color : #1c708a;"  /> 
+    <Button  text="." GridPane.columnIndex="1" GridPane.rowIndex="8" prefWidth="50" prefHeight="20" style="-fx-background-color : #1b9599;"  /> 
+    <Button  text="DEL" GridPane.columnIndex="2" GridPane.rowIndex="8" prefWidth="50" prefHeight="20" onAction="#clearOnClick" style="-fx-background-color : #c95353;"/> 
+    <Button  text="=" GridPane.columnIndex="3" GridPane.rowIndex="8" prefWidth="50" prefHeight="20"   onAction="#equals" style="-fx-background-color : #9ce7d7;"  />  
+    
+   
+</GridPane>
+</VBox>
